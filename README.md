@@ -109,12 +109,15 @@ npm run deploy
 Dado a que solo se ve una página en blanco, Se restaura a una versión anterior a estos pasos para poder visualizar la aplicación web. Se realizan pruebas locales:
 
 1. Página principal
+
 ![](./assets/pic01.png)
 
 2. Elección aleatoria de id en API
+
 ![](./assets/pic02.png)
 
 3. Información detallada sobre id seleccionada
+
 ![](./assets/pic03.png)
 
 ## 4. Conclusión
