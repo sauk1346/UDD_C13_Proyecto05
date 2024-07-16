@@ -49,7 +49,12 @@ npm install
 npm install react-router-dom
 ```
 
-4. Establecer jerarquía de archivos
+4. Instalar bootstrap
+```sh
+npm --save bootstrap
+```
+
+5. Establecer jerarquía de archivos
 ```
 premios-nobel/
 ├── public/
@@ -65,28 +70,52 @@ premios-nobel/
 ├── vite.config.js
 ```
 
-5. Crear componentes según jerarquía de archivos: `Header.jsx`, `NobelList.jsx`, `NobelDetail.jsc`, 
+6. Crear componentes según jerarquía de archivos: `Header.jsx`, `NobelList.jsx`, `NobelDetail.jsc`, 
 
 ## 3. Pruebas
-Se utiliza 'Github Pages' para publicar el proyecto.
+Se intentó utilizar 'Github Pages' para publicar el proyecto. Sin embargo, surgieron errores y la página se veía en blanco. Se listan los pasos intentados:
 
-1. Instalar paquete `gh-pages`
+1. Crear repositorio `premios-nobel`
+
+2. Instalar paquete `gh-pages`
 ```sh
 npm install gh-pages --save-dev
 ```
 
-2. Agregar propiedad `homepage` en `package.json`
+3. Agregar instrucción en `vite.config.js`
 
-```sh
-"homepage": "https://gitname.github.io/react-gh-pages",
+```jsx
+base: '/premios-nobel',
 ```
 
-3. Agregar scripts de publicación en `package.json`
+4. Agregar scripts de publicación en `package.json`
 
 ```sh
 "predeploy": "npm run build",
-"deploy": "gh-pages -d build",
+"deploy": "gh-pages -d dist",
 ```
+
+5. Agregar `home` en `package.json`
+```sh
+"homepage": "https://sauk1346.github.io/premios-nobel/",
+```
+
+6. Publicar proyecto
+```sh
+npm run build
+npm run deploy
+```
+
+Dado a que solo se ve una página en blanco, Se restaura a una versión anterior a estos pasos para poder visualizar la aplicación web. Se realizan pruebas locales:
+
+1. Página principal
+![](./assets/pic01.png)
+
+2. Elección aleatoria de id en API
+![](./assets/pic02.png)
+
+3. Información detallada sobre id seleccionada
+![](./assets/pic03.png)
 
 ## 4. Conclusión
 Este proyecto permitió comprender la biblioteca React y su uso para la creación de aplicaciones web interactivas y rápidas, así como su uso para realizar cambios de estado de manera automática al actualizar la interfaz de usuario.
@@ -96,8 +125,10 @@ Además se mantiene en práctica las clases vistas en módulos anteriores, como 
 ## 5. Referencias
 - UDD BootCamp Web FullStack, Clases 17 a 20, Profesor [Matías Molina Aguilar](https://cl.linkedin.com/in/matiasmolinaaguilar)
 
-- DeivChoi@youtube: [Aprende React en 45 Minutos](https://www.youtube.com/watch?v=PWF5SgnNdp4)
+- DeivChoi@Youtube: [Aprende React en 45 Minutos](https://www.youtube.com/watch?v=PWF5SgnNdp4)
 
-- CodewithBeto@youtube: [Tutorial React hooks](https://www.youtube.com/watch?v=jaLl4ErmU44)
+- CodewithBeto@Youtube: [Tutorial React hooks](https://www.youtube.com/watch?v=jaLl4ErmU44)
 
 - W3Tutorials : [React Tutorial](https://www.w3schools.com/react/)
+
+- FixterGeek@Youtube: [Cómo subit tu proyecto Vite a Github Pages](https://www.youtube.com/watch?v=ZI7MXe-6HzA)
