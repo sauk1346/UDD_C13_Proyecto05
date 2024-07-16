@@ -68,7 +68,25 @@ premios-nobel/
 5. Crear componentes según jerarquía de archivos: `Header.jsx`, `NobelList.jsx`, `NobelDetail.jsc`, 
 
 ## 3. Pruebas
+Se utiliza 'Github Pages' para publicar el proyecto.
 
+1. Instalar paquete `gh-pages`
+```sh
+npm install gh-pages --save-dev
+```
+
+2. Agregar propiedad `homepage` en `package.json`
+
+```sh
+"homepage": "https://gitname.github.io/react-gh-pages",
+```
+
+3. Agregar scripts de publicación en `package.json`
+
+```sh
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+```
 
 ## 4. Conclusión
 Este proyecto permitió comprender la biblioteca React y su uso para la creación de aplicaciones web interactivas y rápidas, así como su uso para realizar cambios de estado de manera automática al actualizar la interfaz de usuario.
