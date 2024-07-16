@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Router>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<div>Home</div>} />
+          <Route index element={<div><br/><br/>Click on 'Nobel Prizes' for random information</div>} />
           <Route path="nobel" element={<NobelList />} />
           <Route path="nobel/:id" element={<NobelDetail />} />
         </Route>

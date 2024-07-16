@@ -7,10 +7,10 @@ const NobelDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.nobelprize.org/v1/laureate/${id}.json`)
+    fetch(`https://api.nobelprize.org/v1/laureate.json?id=${id}`)
       .then(response => response.json())
       .then(data => {
-        console.log('API response',data);//verificar datos entregador por api
+        console.log('API response',data);//verificar datos entregados por api
         if (data.laureates && data.laureates.length > 0) {
           setNobelLaureate(data.laureates[0]);
         }
@@ -32,6 +32,8 @@ const NobelDetail = () => {
 
   return (
     <div>
+      <br/>
+      <br/>
       <h2>{nobelLaureate.firstname} {nobelLaureate.surname}</h2>
       <p><strong>Born:</strong> {nobelLaureate.born || 'N/A'}</p>
       <p><strong>Died:</strong> {nobelLaureate.died || 'N/A'}</p>

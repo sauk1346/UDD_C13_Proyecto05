@@ -32,7 +32,8 @@ const NobelList = () => {
 
   return (
     <div>
-      <h1>Nobel Prizes</h1>
+      <br/>
+      <br/>      
       {randomPrize && (
         <div>
           <h2>{randomPrize.year} - {randomPrize.category}</h2>

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <main>
+      <main className="container">
         <Outlet />
       </main>
     </div>
@@ -14,4 +15,3 @@ function App() {
 }
 
 export default App;
-
